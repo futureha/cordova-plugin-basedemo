@@ -1,0 +1,16 @@
+{
+  "name": "cordova-plugin-basedemo",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-plugin-basedemo",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/futureha/cordova-plugin-basedemo"
+},
+  "description": "Basedemo Cordova Plugin"
+}

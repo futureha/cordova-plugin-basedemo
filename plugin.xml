@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-basedemo"
+    version="1.0.0">
+    <name>Basedemo Template</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/futureha/cordova-plugin-basedemo.git</repo>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.BasedemoPlugin -->
+        <clobbers target="BasedemoPlugin" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="BasedemoPlugin">
+          <param name="android-package" value="com.example.BasedemoPlugin" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/example/BasedemoPlugin.java" target-dir="src/com/example/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="BasedemoPlugin" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="BasedemoPlugin">
+                <param name="ios-package" value="BasedemoPlugin" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/BasedemoPlugin.h" />
+        <source-file src="src/ios/BasedemoPlugin.m" />
+    </platform>
+</plugin>
