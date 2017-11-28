@@ -21,4 +21,4 @@ cordova.plugins.BasedemoPlugin = {
   }
 };
 
-module.exports = BasedemoPlugin;
+module.exports = cordova.plugins.BasedemoPlugin;
